@@ -1,4 +1,5 @@
 import express from 'express';
+import router from './src/routes/index.js'
 
 //Defnir puerto
 const port = process.env.PORT || 4000;
@@ -9,13 +10,9 @@ const app = express();
 app.use(express.static('public'));
 
 
-app.get('/', (req, res) => {
-    
-    res.send('Hola mundo');
-    // res.json({
-    //     id: 1
-    // });
-})
+// Router
+app.use('/', router);
+
 
 
 app.listen(port, () => {
