@@ -1,4 +1,10 @@
+import { send } from '../../utils/messages/messageChannel.js';
+
 const dev = ((req, res) => {
+
+    //TODO channel send
+    //send('Test', 'Titulo Test');
+
 
     // Responder string simple:
     res.send('Inicio');
@@ -9,6 +15,7 @@ const dev = ((req, res) => {
     // });
 
 
+    
 })
 
 export{
